@@ -8,7 +8,7 @@ import (
 )
 
 // see https://github.com/valyala/fasthttp/issues/66
-
+// Custom listener struct
 type GracefulListener struct {
 	// inner listener
 	ln net.Listener
@@ -35,6 +35,7 @@ func newGracefulListener(ln net.Listener, maxWaitTime time.Duration) net.Listene
 	}
 }
 
+// Accept connections
 func (ln *GracefulListener) Accept() (net.Conn, error) {
 	c, err := ln.ln.Accept()
 
@@ -50,6 +51,7 @@ func (ln *GracefulListener) Accept() (net.Conn, error) {
 	}, nil
 }
 
+// get address
 func (ln *GracefulListener) Addr() net.Addr {
 	return ln.ln.Addr()
 }
