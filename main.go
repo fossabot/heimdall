@@ -14,8 +14,8 @@ import (
 // guard is a high performance circuit breaker written in Go.
 
 var (
-	proxyAddr  = flag.String("proxyAddr", ":23456", "proxy server listen at")
-	configAddr = flag.String("configAddr", ":12345", "config server listen at")
+	proxyAddr  = flag.String("proxyAddr", ":80", "proxy server listen at")
+	configAddr = flag.String("configAddr", ":8080", "config server listen at")
 	configPath = flag.String("configPath", "/tmp/guard.json", "configuration sync path")
 
 	breaker = NewBreaker()
