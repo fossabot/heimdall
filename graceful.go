@@ -7,8 +7,7 @@ import (
 	"time"
 )
 
-// see https://github.com/valyala/fasthttp/issues/66
-// Custom listener struct
+// GracefulListener is a custom struct (see https://github.com/valyala/fasthttp/issues/66)
 type GracefulListener struct {
 	// inner listener
 	ln net.Listener
@@ -51,7 +50,7 @@ func (ln *GracefulListener) Accept() (net.Conn, error) {
 	}, nil
 }
 
-// get address
+// Addr returns the listeners IP address.
 func (ln *GracefulListener) Addr() net.Addr {
 	return ln.ln.Addr()
 }
