@@ -30,13 +30,13 @@ func TestWRRFound(t *testing.T) {
 		shouldBe []int
 	}
 	expectResultList := []expectResult{
-		expectResult{true, h1, []int{-2, 1, 1}},
-		expectResult{true, h1, []int{-4, 2, 2}},
-		expectResult{true, h2, []int{1, -4, 3}},
-		expectResult{true, h1, []int{-1, -3, 4}},
-		expectResult{true, h3, []int{4, -2, -2}},
-		expectResult{true, h1, []int{2, -1, -1}},
-		expectResult{true, h1, []int{0, 0, 0}},
+		{true, h1, []int{-2, 1, 1}},
+		{true, h1, []int{-4, 2, 2}},
+		{true, h2, []int{1, -4, 3}},
+		{true, h1, []int{-1, -3, 4}},
+		{true, h3, []int{4, -2, -2}},
+		{true, h1, []int{2, -1, -1}},
+		{true, h1, []int{0, 0, 0}},
 	}
 
 	for i, e := range expectResultList {
@@ -78,13 +78,13 @@ func TestWRRNotFound(t *testing.T) {
 		shouldBe []int
 	}
 	expectResultList := []expectResult{
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
-		expectResult{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
+		{false, nil, []int{0, 0, 0}},
 	}
 
 	for i, e := range expectResultList {
