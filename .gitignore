@@ -1,0 +1,20 @@
+naries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+.glide/
+
+# binarys
+heimdall
+heimdall.linux_386
+heimdall.linux_amd64
+heimdall.macos_amd64
+heimdall.windows_386.exe
+heimdall.windows_amd64.exe
+
+# vendor
+vendor/
