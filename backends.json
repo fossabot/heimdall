@@ -1,0 +1,10 @@
+{
+    "name": "api.thingiverse.local",
+    "backends": ["127.0.0.1:32771", "127.0.0.1:32770", "127.0.0.1:32769"],
+    "weights": [5, 1, 1],
+    "ratio": 0.3,
+    "paths": ["/"],
+    "methods": ["GET"],
+    "fallback_type": "text",
+    "fallback_content": "hello world"
+}
